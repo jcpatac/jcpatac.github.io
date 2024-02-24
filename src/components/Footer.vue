@@ -9,13 +9,13 @@
 
                 <div class="col-xl-6 col-bg-6 col-md-6 col-sm-12">
                     <div class="text-center">
-                        <button class="btn btn-outline-secondary mx-2 " @click="open('linkedin')">
+                        <button class="btn btn-outline-secondary mx-2 " @click="openLink('linkedin')">
                             <i class="fab fa-linkedin"></i>
                         </button>
-                        <button class="btn btn-outline-secondary mx-2" @click="open('github')">
+                        <button class="btn btn-outline-secondary mx-2" @click="openLink('github')">
                             <i class="fab fa-github"></i>
                         </button>
-                        <button class="btn btn-outline-secondary mx-2" @click="open('resume')">
+                        <button class="btn btn-outline-secondary mx-2" @click="openLink('resume')">
                             <i class="fa fa-file"></i>
                         </button>
                     </div>
@@ -32,12 +32,26 @@ export default {
     name: "Footer",
     data() {
         return {
-            linkedin: 'www.linkedin.com',
-            github: 'www.github.com/jcpatac',
-            resume: 'www.google.com',
+            linkedin: 'https://linkedin.com/',
+            github: 'https://github.com/jcpatac',
+            resume: '/'
         };
     },
-    methods: {},
+    methods: {
+        openLink(link) {
+            switch (link) {
+                case "linkedin":
+                    window.open(this.linkedin, "_blank");
+                    break;
+                case "github":
+                    window.open(this.github, "_blank");
+                    break;
+                case "resume":
+                    window.open(this.resume, "_blank");
+                    break;
+            }
+        }
+    },
 };
 </script>
 

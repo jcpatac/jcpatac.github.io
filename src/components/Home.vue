@@ -19,13 +19,16 @@
                         <p v-html="description"></p>
                     </div>
                     <div class="text-center pb-4">
-                        <button class="btn btn-outline-secondary mx-2" v-tooltip.bottom="'LinkedIn'">
+                        <button class="btn btn-outline-secondary mx-2" @click="openLink('linkedin')"
+                            v-tooltip.bottom="'LinkedIn'">
                             <i class="fab fa-linkedin"></i>
                         </button>
-                        <button class="btn btn-outline-secondary mx-2" v-tooltip.bottom="'GitHub'">
+                        <button class="btn btn-outline-secondary mx-2" @click="openLink('github')"
+                            v-tooltip.bottom="'GitHub'">
                             <i class="fab fa-github"></i>
                         </button>
-                        <button class="btn btn-outline-secondary mx-2" v-tooltip.bottom="'Resume'">
+                        <button class="btn btn-outline-secondary mx-2" @click="openLink('resume')"
+                            v-tooltip.bottom="'Resume'">
                             <i class="fa fa-file"></i>
                         </button>
                     </div>
@@ -52,12 +55,29 @@ export default {
             picture: require('../assets/me.jpeg'),
             description: `
                 I am Caesar, a Full Stack Developer that brings superior frontend and backend design to promote quality software. Thorough comprehension of JavaScript and Python programming languages to generate custom software designs. Extensive collaboration with different teams to ascertain client expectations and oversee software creation from initial planning through roll-out and support. Detail-oriented approach to maintaining application responsiveness, effectiveness, and security.
-            `
+            `,
+            linkedin: 'https://linkedin.com/',
+            github: 'https://github.com/jcpatac',
+            resume: '/'
         }
     },
     computed: {},
     mounted() { },
-    methods: {}
+    methods: {
+        openLink(link) {
+            switch (link) {
+                case "linkedin":
+                    window.open(this.linkedin, "_blank");
+                    break;
+                case "github":
+                    window.open(this.github, "_blank");
+                    break;
+                case "resume":
+                    window.open(this.resume, "_blank");
+                    break;
+            }
+        }
+    }
 }
 </script>
 
