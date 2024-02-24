@@ -32,7 +32,7 @@ export default {
     name: "Footer",
     data() {
         return {
-            linkedin: 'https://linkedin.com/',
+            linkedin: 'https://linkedin.com/in/caesar-patac',
             github: 'https://github.com/jcpatac',
             resume: '/'
         };
