@@ -106,19 +106,14 @@ export default {
 }
 
 .fa {
-    /* color: rgb(212, 149, 97); */
     color: rgb(150, 194, 219);
-    /* color: #C5ADC5; */
     font-size: 40px;
     transition: all 0.5s;
 }
 
 .fas {
-    /* color: rgb(212, 149, 97); */
     color: rgb(150, 194, 219);
-    /* color: #C5ADC5; */
     font-size: 40px;
-    /* font-weight: bold; */
     transition: all 0.5s;
 }
 </style>

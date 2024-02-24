@@ -17,7 +17,6 @@
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld.vue'
 import Navbar from "./components/Navbar.vue";
 import Home from "./components/Home.vue";
 import About from "./components/About";
@@ -98,10 +97,8 @@ export default {
     font-family: 'Montserrat', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    /* text-align: center; */
     color: #2c3e50;
     width: 100%;
-    /* margin-top: 60px; */
 }
 
 @media screen and (max-width: 580px) {
@@ -111,7 +108,7 @@ export default {
 }
 
 .parent {
-    /* margin-top: 38px; */
+    margin-top: 38px;
     padding-top: 40px;
     position: relative;
 }
@@ -171,7 +168,6 @@ export default {
     color: black;
     border-radius: 8px;
     font-size: 10px;
-    /* padding: 5px 10px 4px; */
 }
 
 .tooltip .tooltip-arrow {

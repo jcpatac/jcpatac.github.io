@@ -111,7 +111,6 @@ nav {
 
 .navbar-blur {
     background-color: #ffffff7e;
-    /* background-color: rgb(229, 237, 241); */
     backdrop-filter: blur(12px);
 }
 </style>
